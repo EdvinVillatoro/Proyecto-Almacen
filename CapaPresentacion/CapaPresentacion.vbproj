@@ -200,6 +200,12 @@
     <EmbeddedResource Include="Vistas Admin\frmEdificios.resx">
       <DependentUpon>frmEdificios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Tecnico\frmServicios1.resx">
+      <DependentUpon>frmServicios1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Tecnico\frmSolucionesServicio.resx">
+      <DependentUpon>frmSolucionesServicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas Tecnico\frmTecnicoPrincipal.resx">
       <DependentUpon>frmTecnicoPrincipal.vb</DependentUpon>
     </EmbeddedResource>

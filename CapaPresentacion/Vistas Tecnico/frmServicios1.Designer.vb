@@ -22,9 +22,91 @@ Partial Class frmServicios1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnBuscarServicioAsignado = New System.Windows.Forms.Button()
+        Me.txtDpiTecnico = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dgvServiciosTecnicos = New System.Windows.Forms.DataGridView()
+        Me.Panel1.SuspendLayout()
+        CType(Me.dgvServiciosTecnicos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Controls.Add(Me.dgvServiciosTecnicos)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.txtDpiTecnico)
+        Me.Panel1.Controls.Add(Me.btnBuscarServicioAsignado)
+        Me.Panel1.Location = New System.Drawing.Point(0, -2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(801, 452)
+        Me.Panel1.TabIndex = 6
+        '
+        'btnBuscarServicioAsignado
+        '
+        Me.btnBuscarServicioAsignado.Location = New System.Drawing.Point(552, 100)
+        Me.btnBuscarServicioAsignado.Name = "btnBuscarServicioAsignado"
+        Me.btnBuscarServicioAsignado.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscarServicioAsignado.TabIndex = 0
+        Me.btnBuscarServicioAsignado.Text = "Buscar"
+        Me.btnBuscarServicioAsignado.UseVisualStyleBackColor = True
+        '
+        'txtDpiTecnico
+        '
+        Me.txtDpiTecnico.Location = New System.Drawing.Point(363, 103)
+        Me.txtDpiTecnico.Name = "txtDpiTecnico"
+        Me.txtDpiTecnico.Size = New System.Drawing.Size(100, 20)
+        Me.txtDpiTecnico.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(279, 37)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(246, 25)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Ver Servicios Asignados"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(227, 110)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Ingrese DPI"
+        '
+        'dgvServiciosTecnicos
+        '
+        Me.dgvServiciosTecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvServiciosTecnicos.Location = New System.Drawing.Point(209, 186)
+        Me.dgvServiciosTecnicos.Name = "dgvServiciosTecnicos"
+        Me.dgvServiciosTecnicos.Size = New System.Drawing.Size(447, 179)
+        Me.dgvServiciosTecnicos.TabIndex = 4
+        '
+        'frmServicios1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "frmServicios1"
+        Me.Controls.Add(Me.Panel1)
+        Me.Name = "frmServicios1"
+        Me.Text = "Servicios"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.dgvServiciosTecnicos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents dgvServiciosTecnicos As DataGridView
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtDpiTecnico As TextBox
+    Friend WithEvents btnBuscarServicioAsignado As Button
 End Class

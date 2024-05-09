@@ -10,7 +10,7 @@ Public Class frmLogin
     ' Posteriormente, My.User devolverá la información de identidad encapsulada en el objeto CustomPrincipal
     ' como el nombre de usuario, nombre para mostrar, etc.
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'CapaDeDatos.Conexion.Conectar(txtUsuario.Text, txtPass.Text)
         'CapaDeDatos.ModeloUsuarios.VerRoles(txtUsuario.Text)
 
@@ -20,7 +20,7 @@ Public Class frmLogin
 
         If (CapaDeDatos.Conexion.conexion.State = 1) Then
 
-                If (RolEncontrado.Equals("Administrador")) Then
+            If (RolEncontrado.Equals("Administrador")) Then
                 contenedorAdministradores.Show()
                 contenedorAdministradores.WindowState = FormWindowState.Maximized
                 contenedorAdmin.MdiParent = contenedorAdministradores
@@ -52,17 +52,67 @@ Public Class frmLogin
                     End If
                 End If
             End If
-            End If
+        End If
 
 
 
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Application.Exit()
     End Sub
 
-    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub OK_Click_1(sender As Object, e As EventArgs) Handles OK.Click
+        CapaDeDatos.Conexion.Conectar(txtUsuario.Text, txtPass.Text)
+        Dim RolEncontrado = ModeloUsuarios.VerRoles(txtUsuario.Text)
+
+
+        If (CapaDeDatos.Conexion.conexion.State = 1) Then
+
+            If (RolEncontrado.Equals("Administrador")) Then
+                contenedorAdministradores.Show()
+                contenedorAdministradores.WindowState = FormWindowState.Maximized
+                contenedorAdmin.MdiParent = contenedorAdministradores
+
+                contenedorAdministradores.Show()
+                contenedorAdmin.StartPosition = 1
+                Me.Dispose()
+
+                ContenedorPrincipal.Close()
+
+                contenedorAdmin.Show()
+            Else
+                If (RolEncontrado.Equals("Tecnico")) Then
+
+                Else
+                    If (RolEncontrado.Equals("Cliente")) Then
+                        contenedorAdministradores.Show()
+                        contenedorAdministradores.WindowState = FormWindowState.Maximized
+                        frmPriCliente.MdiParent = contenedorAdministradores
+                        frmPriCliente.StartPosition = 1
+                        contenedorAdministradores.Show()
+
+                        Me.Dispose()
+
+                        ContenedorPrincipal.Close()
+
+                        frmPriCliente.Show()
+
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Cancel_Click_1(sender As Object, e As EventArgs) Handles Cancel.Click
+        Application.Exit()
     End Sub
 End Class

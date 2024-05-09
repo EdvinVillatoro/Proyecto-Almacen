@@ -29,6 +29,7 @@ Partial Class frmMostrarServiciosSolicitados
         Me.btnVerEstado = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,6 +79,7 @@ Partial Class frmMostrarServiciosSolicitados
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(125, 20)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -94,6 +96,14 @@ Partial Class frmMostrarServiciosSolicitados
         Me.DataGridView1.Size = New System.Drawing.Size(484, 150)
         Me.DataGridView1.TabIndex = 12
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Location = New System.Drawing.Point(2, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(599, 367)
+        Me.Panel1.TabIndex = 13
+        '
         'frmMostrarServiciosSolicitados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -106,9 +116,10 @@ Partial Class frmMostrarServiciosSolicitados
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMostrarServiciosSolicitados"
-        Me.Text = " "
+        Me.Text = "Servicios"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -122,4 +133,5 @@ Partial Class frmMostrarServiciosSolicitados
     Friend WithEvents btnVerEstado As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel1 As Panel
 End Class

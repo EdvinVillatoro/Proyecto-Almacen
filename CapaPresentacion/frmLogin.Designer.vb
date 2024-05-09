@@ -14,13 +14,6 @@ Partial Class frmLogin
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-    Friend WithEvents UsernameLabel As System.Windows.Forms.Label
-    Friend WithEvents PasswordLabel As System.Windows.Forms.Label
-    Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
-    Friend WithEvents txtPass As System.Windows.Forms.TextBox
-    Friend WithEvents OK As System.Windows.Forms.Button
-    Friend WithEvents Cancel As System.Windows.Forms.Button
 
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
@@ -28,103 +21,117 @@ Partial Class frmLogin
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.PasswordLabel = New System.Windows.Forms.Label()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.OK = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Cancel = New System.Windows.Forms.Button()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.txtPass = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LogoPictureBox
+        'Panel1
         '
-        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(165, 193)
-        Me.LogoPictureBox.TabIndex = 0
-        Me.LogoPictureBox.TabStop = False
-        '
-        'UsernameLabel
-        '
-        Me.UsernameLabel.Location = New System.Drawing.Point(172, 24)
-        Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
-        Me.UsernameLabel.TabIndex = 0
-        Me.UsernameLabel.Text = "&Nombre de usuario"
-        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PasswordLabel
-        '
-        Me.PasswordLabel.Location = New System.Drawing.Point(172, 81)
-        Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
-        Me.PasswordLabel.TabIndex = 2
-        Me.PasswordLabel.Text = "&Contraseña"
-        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.Location = New System.Drawing.Point(174, 44)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(220, 22)
-        Me.txtUsuario.TabIndex = 1
-        '
-        'txtPass
-        '
-        Me.txtPass.Location = New System.Drawing.Point(174, 101)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(220, 22)
-        Me.txtPass.TabIndex = 3
-        '
-        'OK
-        '
-        Me.OK.Location = New System.Drawing.Point(197, 161)
-        Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(94, 23)
-        Me.OK.TabIndex = 4
-        Me.OK.Text = "&Aceptar"
+        Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Controls.Add(Me.Cancel)
+        Me.Panel1.Controls.Add(Me.OK)
+        Me.Panel1.Controls.Add(Me.txtPass)
+        Me.Panel1.Controls.Add(Me.txtUsuario)
+        Me.Panel1.Controls.Add(Me.PasswordLabel)
+        Me.Panel1.Controls.Add(Me.UsernameLabel)
+        Me.Panel1.Location = New System.Drawing.Point(0, 1)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(336, 322)
+        Me.Panel1.TabIndex = 6
         '
         'Cancel
         '
+        Me.Cancel.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.Location = New System.Drawing.Point(300, 161)
+        Me.Cancel.Location = New System.Drawing.Point(178, 160)
+        Me.Cancel.Margin = New System.Windows.Forms.Padding(2)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(94, 23)
-        Me.Cancel.TabIndex = 5
+        Me.Cancel.Size = New System.Drawing.Size(70, 19)
+        Me.Cancel.TabIndex = 11
         Me.Cancel.Text = "&Cancelar"
+        Me.Cancel.UseVisualStyleBackColor = False
+        '
+        'OK
+        '
+        Me.OK.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.OK.Location = New System.Drawing.Point(101, 160)
+        Me.OK.Margin = New System.Windows.Forms.Padding(2)
+        Me.OK.Name = "OK"
+        Me.OK.Size = New System.Drawing.Size(70, 19)
+        Me.OK.TabIndex = 10
+        Me.OK.Text = "&Aceptar"
+        Me.OK.UseVisualStyleBackColor = False
+        '
+        'txtPass
+        '
+        Me.txtPass.Location = New System.Drawing.Point(83, 111)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPass.Size = New System.Drawing.Size(166, 20)
+        Me.txtPass.TabIndex = 9
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Location = New System.Drawing.Point(83, 65)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(166, 20)
+        Me.txtUsuario.TabIndex = 7
+        '
+        'PasswordLabel
+        '
+        Me.PasswordLabel.Location = New System.Drawing.Point(82, 95)
+        Me.PasswordLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(165, 19)
+        Me.PasswordLabel.TabIndex = 8
+        Me.PasswordLabel.Text = "&Contraseña"
+        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'UsernameLabel
+        '
+        Me.UsernameLabel.Location = New System.Drawing.Point(82, 49)
+        Me.UsernameLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(165, 19)
+        Me.UsernameLabel.TabIndex = 6
+        Me.UsernameLabel.Text = "&Nombre de usuario"
+        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmLogin
         '
-        Me.AcceptButton = Me.OK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(447, 228)
-        Me.Controls.Add(Me.Cancel)
-        Me.Controls.Add(Me.OK)
-        Me.Controls.Add(Me.txtPass)
-        Me.Controls.Add(Me.txtUsuario)
-        Me.Controls.Add(Me.PasswordLabel)
-        Me.Controls.Add(Me.UsernameLabel)
-        Me.Controls.Add(Me.LogoPictureBox)
+        Me.ClientSize = New System.Drawing.Size(335, 323)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmLogin"
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Login"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Cancel As Button
+    Friend WithEvents OK As Button
+    Friend WithEvents txtPass As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents PasswordLabel As Label
+    Friend WithEvents UsernameLabel As Label
 End Class

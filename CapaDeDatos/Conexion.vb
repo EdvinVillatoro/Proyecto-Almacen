@@ -5,7 +5,7 @@ Public Class Conexion
 
     Public Shared Function Conectar(Usuario As String, Pass As String)
         Try
-            conexion = New SqlConnection("Data Source=EDVINVILLATORO\SQLEXPRESS;Initial Catalog=SoporteTecnico;User ID=" & Usuario & ";Password=" & Pass & "")
+            conexion = New SqlConnection("Data Source=ALEX\SQLEXPRESS;Initial Catalog=SoporteTecnico;User ID=" & Usuario & ";Password=" & Pass & "")
             If (conexion.State = 0) Then
                 conexion.Open()
                 MsgBox("Acceso Consedido")

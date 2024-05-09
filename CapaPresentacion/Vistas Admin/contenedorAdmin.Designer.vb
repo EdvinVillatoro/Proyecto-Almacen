@@ -29,16 +29,18 @@ Partial Class contenedorAdmin
         Me.BtnServiciosPrestados = New System.Windows.Forms.Button()
         Me.btnServiciosSolicitados = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'btnAbrirEdificios
         '
+        Me.btnAbrirEdificios.BackColor = System.Drawing.SystemColors.Control
         Me.btnAbrirEdificios.Location = New System.Drawing.Point(12, 95)
         Me.btnAbrirEdificios.Name = "btnAbrirEdificios"
         Me.btnAbrirEdificios.Size = New System.Drawing.Size(211, 51)
         Me.btnAbrirEdificios.TabIndex = 0
         Me.btnAbrirEdificios.Text = "Edificios"
-        Me.btnAbrirEdificios.UseVisualStyleBackColor = True
+        Me.btnAbrirEdificios.UseVisualStyleBackColor = False
         '
         'btnAbrirClientes
         '
@@ -88,12 +90,21 @@ Partial Class contenedorAdmin
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(183, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(428, 73)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Administrador"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(801, 450)
+        Me.Panel1.TabIndex = 8
         '
         'contenedorAdmin
         '
@@ -107,8 +118,9 @@ Partial Class contenedorAdmin
         Me.Controls.Add(Me.btnTecnicos)
         Me.Controls.Add(Me.btnAbrirClientes)
         Me.Controls.Add(Me.btnAbrirEdificios)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "contenedorAdmin"
-        Me.Text = "contenedorAdmin"
+        Me.Text = "Menu Administrador"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -121,4 +133,5 @@ Partial Class contenedorAdmin
     Friend WithEvents BtnServiciosPrestados As Button
     Friend WithEvents btnServiciosSolicitados As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
