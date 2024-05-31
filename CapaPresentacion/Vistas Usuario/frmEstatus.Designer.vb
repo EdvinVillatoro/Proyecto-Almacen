@@ -28,12 +28,13 @@ Partial Class frmEstatus
         Me.btnMostarEstado = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.dgvEstadosServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDpiCliente
         '
         Me.txtDpiCliente.Location = New System.Drawing.Point(220, 54)
-        Me.txtDpiCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDpiCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDpiCliente.Name = "txtDpiCliente"
         Me.txtDpiCliente.Size = New System.Drawing.Size(158, 20)
         Me.txtDpiCliente.TabIndex = 0
@@ -51,18 +52,18 @@ Partial Class frmEstatus
         'dgvEstadosServicios
         '
         Me.dgvEstadosServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEstadosServicios.Location = New System.Drawing.Point(45, 99)
-        Me.dgvEstadosServicios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvEstadosServicios.Location = New System.Drawing.Point(27, 106)
+        Me.dgvEstadosServicios.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvEstadosServicios.Name = "dgvEstadosServicios"
         Me.dgvEstadosServicios.RowHeadersWidth = 51
         Me.dgvEstadosServicios.RowTemplate.Height = 24
-        Me.dgvEstadosServicios.Size = New System.Drawing.Size(536, 243)
+        Me.dgvEstadosServicios.Size = New System.Drawing.Size(965, 411)
         Me.dgvEstadosServicios.TabIndex = 2
         '
         'btnMostarEstado
         '
         Me.btnMostarEstado.Location = New System.Drawing.Point(458, 48)
-        Me.btnMostarEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnMostarEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.btnMostarEstado.Name = "btnMostarEstado"
         Me.btnMostarEstado.Size = New System.Drawing.Size(56, 19)
         Me.btnMostarEstado.TabIndex = 3
@@ -72,25 +73,26 @@ Partial Class frmEstatus
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Controls.Add(Me.dgvEstadosServicios)
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(601, 365)
+        Me.Panel1.Size = New System.Drawing.Size(1004, 548)
         Me.Panel1.TabIndex = 4
         '
         'frmEstatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(1002, 545)
         Me.Controls.Add(Me.btnMostarEstado)
-        Me.Controls.Add(Me.dgvEstadosServicios)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtDpiCliente)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmEstatus"
         Me.Text = "Estatus"
         CType(Me.dgvEstadosServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

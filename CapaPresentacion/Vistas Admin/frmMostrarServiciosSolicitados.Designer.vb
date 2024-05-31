@@ -24,56 +24,58 @@ Partial Class frmMostrarServiciosSolicitados
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtCodServicio = New System.Windows.Forms.TextBox()
+        Me.txtDpiTecnico = New System.Windows.Forms.TextBox()
         Me.btnVerEstado = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEstadoServicio = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEstadoServicio, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(97, 103)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(129, 127)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 13)
+        Me.Label1.Size = New System.Drawing.Size(127, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Codigo Del Servicio"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(97, 136)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(129, 167)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 13)
+        Me.Label4.Size = New System.Drawing.Size(81, 16)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "DPI del Solicitante"
+        Me.Label4.Text = "DPI Tecnico"
         '
-        'TextBox1
+        'txtCodServicio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(302, 100)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.txtCodServicio.Location = New System.Drawing.Point(403, 123)
+        Me.txtCodServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodServicio.Name = "txtCodServicio"
+        Me.txtCodServicio.Size = New System.Drawing.Size(132, 22)
+        Me.txtCodServicio.TabIndex = 5
         '
-        'TextBox4
+        'txtDpiTecnico
         '
-        Me.TextBox4.Location = New System.Drawing.Point(302, 133)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 8
+        Me.txtDpiTecnico.Location = New System.Drawing.Point(403, 164)
+        Me.txtDpiTecnico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDpiTecnico.Name = "txtDpiTecnico"
+        Me.txtDpiTecnico.Size = New System.Drawing.Size(132, 22)
+        Me.txtDpiTecnico.TabIndex = 8
         '
         'btnVerEstado
         '
-        Me.btnVerEstado.Location = New System.Drawing.Point(467, 103)
+        Me.btnVerEstado.Location = New System.Drawing.Point(623, 127)
+        Me.btnVerEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVerEstado.Name = "btnVerEstado"
-        Me.btnVerEstado.Size = New System.Drawing.Size(101, 46)
+        Me.btnVerEstado.Size = New System.Drawing.Size(135, 57)
         Me.btnVerEstado.TabIndex = 10
-        Me.btnVerEstado.Text = "Ver estado del Servicio"
+        Me.btnVerEstado.Text = "Asignar servicio al tecnico"
         Me.btnVerEstado.UseVisualStyleBackColor = True
         '
         'Label2
@@ -81,46 +83,49 @@ Partial Class frmMostrarServiciosSolicitados
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(125, 20)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(167, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(372, 37)
+        Me.Label2.Size = New System.Drawing.Size(466, 46)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Ver el estado del servicio"
         '
-        'DataGridView1
+        'dgvEstadoServicio
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(84, 173)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(484, 150)
-        Me.DataGridView1.TabIndex = 12
+        Me.dgvEstadoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEstadoServicio.Location = New System.Drawing.Point(129, 273)
+        Me.dgvEstadoServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvEstadoServicio.Name = "dgvEstadoServicio"
+        Me.dgvEstadoServicio.RowHeadersWidth = 51
+        Me.dgvEstadoServicio.Size = New System.Drawing.Size(1018, 318)
+        Me.dgvEstadoServicio.TabIndex = 12
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Panel1.Location = New System.Drawing.Point(2, 0)
+        Me.Panel1.Controls.Add(Me.dgvEstadoServicio)
+        Me.Panel1.Location = New System.Drawing.Point(3, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(599, 367)
+        Me.Panel1.Size = New System.Drawing.Size(1266, 637)
         Me.Panel1.TabIndex = 13
         '
         'frmMostrarServiciosSolicitados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(1267, 635)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnVerEstado)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtDpiTecnico)
+        Me.Controls.Add(Me.txtCodServicio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmMostrarServiciosSolicitados"
         Me.Text = "Servicios"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEstadoServicio, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,10 +133,10 @@ Partial Class frmMostrarServiciosSolicitados
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtCodServicio As TextBox
+    Friend WithEvents txtDpiTecnico As TextBox
     Friend WithEvents btnVerEstado As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvEstadoServicio As DataGridView
     Friend WithEvents Panel1 As Panel
 End Class

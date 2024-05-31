@@ -23,11 +23,11 @@ Partial Class frmServicios1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnBuscarServicioAsignado = New System.Windows.Forms.Button()
-        Me.txtDpiTecnico = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvServiciosTecnicos = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtDpiTecnico = New System.Windows.Forms.TextBox()
+        Me.btnBuscarServicioAsignado = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvServiciosTecnicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,24 +42,25 @@ Partial Class frmServicios1
         Me.Panel1.Controls.Add(Me.btnBuscarServicioAsignado)
         Me.Panel1.Location = New System.Drawing.Point(0, -2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(801, 452)
+        Me.Panel1.Size = New System.Drawing.Size(1154, 638)
         Me.Panel1.TabIndex = 6
         '
-        'btnBuscarServicioAsignado
+        'dgvServiciosTecnicos
         '
-        Me.btnBuscarServicioAsignado.Location = New System.Drawing.Point(552, 100)
-        Me.btnBuscarServicioAsignado.Name = "btnBuscarServicioAsignado"
-        Me.btnBuscarServicioAsignado.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscarServicioAsignado.TabIndex = 0
-        Me.btnBuscarServicioAsignado.Text = "Buscar"
-        Me.btnBuscarServicioAsignado.UseVisualStyleBackColor = True
+        Me.dgvServiciosTecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvServiciosTecnicos.Location = New System.Drawing.Point(12, 186)
+        Me.dgvServiciosTecnicos.Name = "dgvServiciosTecnicos"
+        Me.dgvServiciosTecnicos.Size = New System.Drawing.Size(1125, 364)
+        Me.dgvServiciosTecnicos.TabIndex = 4
         '
-        'txtDpiTecnico
+        'Label2
         '
-        Me.txtDpiTecnico.Location = New System.Drawing.Point(363, 103)
-        Me.txtDpiTecnico.Name = "txtDpiTecnico"
-        Me.txtDpiTecnico.Size = New System.Drawing.Size(100, 20)
-        Me.txtDpiTecnico.TabIndex = 1
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(235, 106)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Dpi Del Cliente"
         '
         'Label1
         '
@@ -71,28 +72,27 @@ Partial Class frmServicios1
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Ver Servicios Asignados"
         '
-        'Label2
+        'txtDpiTecnico
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(227, 110)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Ingrese DPI"
+        Me.txtDpiTecnico.Location = New System.Drawing.Point(363, 103)
+        Me.txtDpiTecnico.Name = "txtDpiTecnico"
+        Me.txtDpiTecnico.Size = New System.Drawing.Size(100, 20)
+        Me.txtDpiTecnico.TabIndex = 1
         '
-        'dgvServiciosTecnicos
+        'btnBuscarServicioAsignado
         '
-        Me.dgvServiciosTecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvServiciosTecnicos.Location = New System.Drawing.Point(209, 186)
-        Me.dgvServiciosTecnicos.Name = "dgvServiciosTecnicos"
-        Me.dgvServiciosTecnicos.Size = New System.Drawing.Size(447, 179)
-        Me.dgvServiciosTecnicos.TabIndex = 4
+        Me.btnBuscarServicioAsignado.Location = New System.Drawing.Point(552, 100)
+        Me.btnBuscarServicioAsignado.Name = "btnBuscarServicioAsignado"
+        Me.btnBuscarServicioAsignado.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscarServicioAsignado.TabIndex = 0
+        Me.btnBuscarServicioAsignado.Text = "Buscar"
+        Me.btnBuscarServicioAsignado.UseVisualStyleBackColor = True
         '
         'frmServicios1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1149, 631)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmServicios1"
         Me.Text = "Servicios"

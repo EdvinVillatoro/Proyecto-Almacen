@@ -24,6 +24,7 @@ Public Class frmClientes
         Dim fechaSolicitud As Date = DtpSolicitudServicio.Value
         Dim dpiSolicitante As String = txtDpiSolicitante.Text
 
+
         ' Llamar a la función Conectar de la clase Conexion para establecer la conexión
         CapaDeDatos.Conexion.Conectar(Usuario:="Fabian", Pass:="123456")
 
@@ -39,6 +40,7 @@ Public Class frmClientes
                     command.Parameters.AddWithValue("@DescripcionServicio", servicioSolicitado)
                     command.Parameters.AddWithValue("@FechaSolicitud", fechaSolicitud)
                     command.Parameters.AddWithValue("@SolicitanteDpi", dpiSolicitante)
+
 
                     ' Ejecutar el comando SQL
                     command.ExecuteNonQuery()

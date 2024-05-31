@@ -24,9 +24,14 @@ Partial Class frmEdificios
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNombreEdificio = New System.Windows.Forms.TextBox()
         Me.btnAgregarEdificio = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvEdificios = New System.Windows.Forms.DataGridView()
+        Me.btnEliminarEdificio = New System.Windows.Forms.Button()
+        Me.btnVerEdificios = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
+        CType(Me.dgvEdificios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,24 +49,24 @@ Partial Class frmEdificios
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(111, 101)
+        Me.Label2.Location = New System.Drawing.Point(71, 67)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 13)
+        Me.Label2.Size = New System.Drawing.Size(100, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Agregar Edificio"
+        Me.Label2.Text = "Nombre Del Edificio"
         '
-        'TextBox1
+        'txtNombreEdificio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(252, 101)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.txtNombreEdificio.Location = New System.Drawing.Point(192, 60)
+        Me.txtNombreEdificio.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombreEdificio.Name = "txtNombreEdificio"
+        Me.txtNombreEdificio.Size = New System.Drawing.Size(135, 20)
+        Me.txtNombreEdificio.TabIndex = 2
         '
         'btnAgregarEdificio
         '
-        Me.btnAgregarEdificio.Location = New System.Drawing.Point(248, 150)
+        Me.btnAgregarEdificio.Location = New System.Drawing.Point(74, 107)
         Me.btnAgregarEdificio.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregarEdificio.Name = "btnAgregarEdificio"
         Me.btnAgregarEdificio.Size = New System.Drawing.Size(79, 35)
@@ -72,24 +77,58 @@ Partial Class frmEdificios
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Controls.Add(Me.dgvEdificios)
+        Me.Panel1.Controls.Add(Me.txtNombreEdificio)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.btnEliminarEdificio)
+        Me.Panel1.Controls.Add(Me.btnVerEdificios)
+        Me.Panel1.Controls.Add(Me.btnAgregarEdificio)
         Me.Panel1.Location = New System.Drawing.Point(1, -2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(599, 369)
         Me.Panel1.TabIndex = 4
+        '
+        'dgvEdificios
+        '
+        Me.dgvEdificios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEdificios.Location = New System.Drawing.Point(28, 164)
+        Me.dgvEdificios.Name = "dgvEdificios"
+        Me.dgvEdificios.Size = New System.Drawing.Size(485, 150)
+        Me.dgvEdificios.TabIndex = 7
+        '
+        'btnEliminarEdificio
+        '
+        Me.btnEliminarEdificio.Location = New System.Drawing.Point(216, 107)
+        Me.btnEliminarEdificio.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEliminarEdificio.Name = "btnEliminarEdificio"
+        Me.btnEliminarEdificio.Size = New System.Drawing.Size(79, 35)
+        Me.btnEliminarEdificio.TabIndex = 5
+        Me.btnEliminarEdificio.Text = "Eliminar Edificio"
+        Me.btnEliminarEdificio.UseVisualStyleBackColor = True
+        '
+        'btnVerEdificios
+        '
+        Me.btnVerEdificios.Location = New System.Drawing.Point(375, 107)
+        Me.btnVerEdificios.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnVerEdificios.Name = "btnVerEdificios"
+        Me.btnVerEdificios.Size = New System.Drawing.Size(79, 35)
+        Me.btnVerEdificios.TabIndex = 4
+        Me.btnVerEdificios.Text = "Ver Edificios"
+        Me.btnVerEdificios.UseVisualStyleBackColor = True
         '
         'frmEdificios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 366)
-        Me.Controls.Add(Me.btnAgregarEdificio)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmEdificios"
         Me.Text = "Edificios"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.dgvEdificios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -97,7 +136,10 @@ Partial Class frmEdificios
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNombreEdificio As TextBox
     Friend WithEvents btnAgregarEdificio As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnEliminarEdificio As Button
+    Friend WithEvents btnVerEdificios As Button
+    Friend WithEvents dgvEdificios As DataGridView
 End Class

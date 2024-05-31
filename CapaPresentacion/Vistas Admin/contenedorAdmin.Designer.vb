@@ -24,12 +24,12 @@ Partial Class contenedorAdmin
     Private Sub InitializeComponent()
         Me.btnAbrirEdificios = New System.Windows.Forms.Button()
         Me.btnAbrirClientes = New System.Windows.Forms.Button()
-        Me.btnTecnicos = New System.Windows.Forms.Button()
         Me.btnOficinas = New System.Windows.Forms.Button()
         Me.BtnServiciosPrestados = New System.Windows.Forms.Button()
         Me.btnServiciosSolicitados = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAbrirEdificios
@@ -44,25 +44,16 @@ Partial Class contenedorAdmin
         '
         'btnAbrirClientes
         '
-        Me.btnAbrirClientes.Location = New System.Drawing.Point(253, 165)
+        Me.btnAbrirClientes.Location = New System.Drawing.Point(268, 183)
         Me.btnAbrirClientes.Name = "btnAbrirClientes"
         Me.btnAbrirClientes.Size = New System.Drawing.Size(211, 51)
         Me.btnAbrirClientes.TabIndex = 1
-        Me.btnAbrirClientes.Text = "Clientes"
+        Me.btnAbrirClientes.Text = "Usuarios"
         Me.btnAbrirClientes.UseVisualStyleBackColor = True
-        '
-        'btnTecnicos
-        '
-        Me.btnTecnicos.Location = New System.Drawing.Point(497, 95)
-        Me.btnTecnicos.Name = "btnTecnicos"
-        Me.btnTecnicos.Size = New System.Drawing.Size(211, 51)
-        Me.btnTecnicos.TabIndex = 2
-        Me.btnTecnicos.Text = "Tecnicos"
-        Me.btnTecnicos.UseVisualStyleBackColor = True
         '
         'btnOficinas
         '
-        Me.btnOficinas.Location = New System.Drawing.Point(12, 262)
+        Me.btnOficinas.Location = New System.Drawing.Point(516, 95)
         Me.btnOficinas.Name = "btnOficinas"
         Me.btnOficinas.Size = New System.Drawing.Size(211, 51)
         Me.btnOficinas.TabIndex = 3
@@ -71,7 +62,7 @@ Partial Class contenedorAdmin
         '
         'BtnServiciosPrestados
         '
-        Me.BtnServiciosPrestados.Location = New System.Drawing.Point(253, 262)
+        Me.BtnServiciosPrestados.Location = New System.Drawing.Point(13, 246)
         Me.BtnServiciosPrestados.Name = "BtnServiciosPrestados"
         Me.BtnServiciosPrestados.Size = New System.Drawing.Size(211, 51)
         Me.BtnServiciosPrestados.TabIndex = 4
@@ -80,7 +71,7 @@ Partial Class contenedorAdmin
         '
         'btnServiciosSolicitados
         '
-        Me.btnServiciosSolicitados.Location = New System.Drawing.Point(497, 262)
+        Me.btnServiciosSolicitados.Location = New System.Drawing.Point(516, 246)
         Me.btnServiciosSolicitados.Name = "btnServiciosSolicitados"
         Me.btnServiciosSolicitados.Size = New System.Drawing.Size(211, 51)
         Me.btnServiciosSolicitados.TabIndex = 5
@@ -101,6 +92,10 @@ Partial Class contenedorAdmin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Panel1.Controls.Add(Me.btnAbrirClientes)
+        Me.Panel1.Controls.Add(Me.btnServiciosSolicitados)
+        Me.Panel1.Controls.Add(Me.BtnServiciosPrestados)
+        Me.Panel1.Controls.Add(Me.btnOficinas)
         Me.Panel1.Location = New System.Drawing.Point(-1, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(801, 450)
@@ -112,15 +107,11 @@ Partial Class contenedorAdmin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnServiciosSolicitados)
-        Me.Controls.Add(Me.BtnServiciosPrestados)
-        Me.Controls.Add(Me.btnOficinas)
-        Me.Controls.Add(Me.btnTecnicos)
-        Me.Controls.Add(Me.btnAbrirClientes)
         Me.Controls.Add(Me.btnAbrirEdificios)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "contenedorAdmin"
         Me.Text = "Menu Administrador"
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,7 +119,6 @@ Partial Class contenedorAdmin
 
     Friend WithEvents btnAbrirEdificios As Button
     Friend WithEvents btnAbrirClientes As Button
-    Friend WithEvents btnTecnicos As Button
     Friend WithEvents btnOficinas As Button
     Friend WithEvents BtnServiciosPrestados As Button
     Friend WithEvents btnServiciosSolicitados As Button

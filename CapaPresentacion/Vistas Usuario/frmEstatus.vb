@@ -14,14 +14,18 @@ Public Class frmEstatus
             Try
                 Conexion.Conectar(Usuario:="Fabian", Pass:="123456")
 
-                Using command As New SqlCommand("EstatusServicio", Conexion.conexion)
+                Using command As New SqlCommand("MostrarServiciosSolicitados", Conexion.conexion)
                     command.CommandType = CommandType.StoredProcedure
+
+                    ' Agregar parámetro para el NumeroDPI
                     command.Parameters.AddWithValue("@NumeroDPI", dpi)
 
                     Dim dataTable As New DataTable()
-                    dataTable.Load(command.ExecuteReader())
+                    Dim adapter As New SqlDataAdapter(command)
+                    adapter.Fill(dataTable)
 
                     dgvEstadosServicios.DataSource = dataTable
+                    dgvEstadosServicios.Columns("DescripcionServicio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 End Using
             Catch ex As Exception
                 MessageBox.Show("Error al recuperar los datos: " & ex.Message)

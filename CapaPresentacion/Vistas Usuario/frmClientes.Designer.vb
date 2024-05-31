@@ -70,7 +70,7 @@ Partial Class frmClientes
         Me.txtServicioSolicitado.Location = New System.Drawing.Point(208, 86)
         Me.txtServicioSolicitado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtServicioSolicitado.Name = "txtServicioSolicitado"
-        Me.txtServicioSolicitado.Size = New System.Drawing.Size(153, 20)
+        Me.txtServicioSolicitado.Size = New System.Drawing.Size(192, 20)
         Me.txtServicioSolicitado.TabIndex = 3
         '
         'btnServicioSol
@@ -88,7 +88,7 @@ Partial Class frmClientes
         Me.txtDpiSolicitante.Location = New System.Drawing.Point(208, 142)
         Me.txtDpiSolicitante.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDpiSolicitante.Name = "txtDpiSolicitante"
-        Me.txtDpiSolicitante.Size = New System.Drawing.Size(153, 20)
+        Me.txtDpiSolicitante.Size = New System.Drawing.Size(192, 20)
         Me.txtDpiSolicitante.TabIndex = 7
         '
         'Label4
@@ -106,7 +106,7 @@ Partial Class frmClientes
         Me.DtpSolicitudServicio.Location = New System.Drawing.Point(208, 110)
         Me.DtpSolicitudServicio.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpSolicitudServicio.Name = "DtpSolicitudServicio"
-        Me.DtpSolicitudServicio.Size = New System.Drawing.Size(182, 20)
+        Me.DtpSolicitudServicio.Size = New System.Drawing.Size(192, 20)
         Me.DtpSolicitudServicio.TabIndex = 8
         '
         'Panel1

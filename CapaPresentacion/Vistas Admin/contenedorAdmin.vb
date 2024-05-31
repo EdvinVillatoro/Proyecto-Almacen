@@ -9,10 +9,7 @@
         frmMostrarClientes.StartPosition = 1
     End Sub
 
-    Private Sub btnTecnicos_Click(sender As Object, e As EventArgs) Handles btnTecnicos.Click
-        frmMostrarTecnicos.Show()
-        frmMostrarTecnicos.StartPosition = 1
-    End Sub
+
 
     Private Sub btnOficinas_Click(sender As Object, e As EventArgs) Handles btnOficinas.Click
         frmOficinas.Show()
